@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     const title = 'CRUD App';
-    int temp_index;
+    int tempIndex;
 
     return Scaffold(
       appBar: AppBar(
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       body: ListData.isEmpty
           ? Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 'Data is empty!',
                 style: TextStyle(
                   fontSize: 20,
@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       title: Text(
                         ListData[index].nama,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -83,22 +83,22 @@ class _HomePageState extends State<HomePage> {
                                 color: kPrimaryColor,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             InkWell(
                               onTap: () {
                                 //
-                                temp_index = index;
+                                tempIndex = index;
                                 setState(() {
-                                  ListData.removeAt(temp_index);
+                                  ListData.removeAt(tempIndex);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     const SnackBar(
                                         content: Text('Data is removed!')),
                                   );
                                 });
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.delete,
                                 color: Colors.red,
                               ),
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
         },
         backgroundColor: kPrimaryColor,
         foregroundColor: kWhiteColor,
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

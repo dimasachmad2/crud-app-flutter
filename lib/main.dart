@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/': (context) => HomePage(),
-        '/add-data': (context) => AddDataPage(),
-        '/edit-page': (context) => EditDataPage(),
+        '/': (context) => const HomePage(),
+        '/add-data': (context) => const AddDataPage(),
+        '/edit-page': (context) => const EditDataPage(),
       },
     );
   }

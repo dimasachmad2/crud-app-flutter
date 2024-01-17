@@ -23,7 +23,7 @@ class _EditDataPageState extends State<EditDataPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           title,
         ),
         backgroundColor: Colors.blue,
@@ -32,7 +32,7 @@ class _EditDataPageState extends State<EditDataPage> {
       body: Form(
         key: formKey,
         child: Container(
-          margin: EdgeInsets.all(40),
+          margin: const EdgeInsets.all(40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -43,7 +43,7 @@ class _EditDataPageState extends State<EditDataPage> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               TextFormField(
@@ -61,7 +61,7 @@ class _EditDataPageState extends State<EditDataPage> {
                   return null;
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
@@ -71,7 +71,7 @@ class _EditDataPageState extends State<EditDataPage> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               TextFormField(
@@ -91,7 +91,7 @@ class _EditDataPageState extends State<EditDataPage> {
                 },
               ),
               Container(
-                margin: EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 30),
                 width: double.infinity,
                 height: 60,
                 child: TextButton(
@@ -107,17 +107,17 @@ class _EditDataPageState extends State<EditDataPage> {
                       Navigator.pushNamed(context, '/');
                     }
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: kPrimaryColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
                   child: Text(
                     'Update',
                     style: whiteText.copyWith(
                       fontSize: 20,
                       fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  style: TextButton.styleFrom(
-                    backgroundColor: kPrimaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
                     ),
                   ),
                 ),
